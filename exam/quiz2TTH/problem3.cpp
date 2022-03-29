@@ -7,7 +7,7 @@ int main()
   short *ss;
   for (i = 0; i < 3; i++)
   {
-    ii[i] = (5 + i) * 0x10000 + 15 + i;
+    ii[i] = (15 + i) * 0x10000 + 15 + i;
   }
   ss = (short *)(ii + 1);
   for (i = -1; i < 2; i++)
