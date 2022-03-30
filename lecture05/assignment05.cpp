@@ -11,10 +11,9 @@ int main()
   unsigned int *SampleRate;
   SampleRate = (unsigned int *)(header + 24);
 
-  myfile.seekg(SampleRate[0] * 10);
-
   short data[1000];
-  myfile.read((char *)data, 1000);
+  myfile.seekg(SampleRate[0] * 10);
+  myfile.read((char *)data, sizeof(data));
   myfile.close();
 
   ofstream myfile2("data.txt", ios::out | ios::binary);
