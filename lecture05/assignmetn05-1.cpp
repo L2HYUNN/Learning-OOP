@@ -7,12 +7,14 @@ void product5(int *, int);
 
 int main()
 {
+  int *data;
+  data = new int[3];
 
   char *data;
   data = new char[36];
 
   int *a;
-  a = (int *)data;
+  a = (int *)data;  
   int *b;
   b = (int *)data + 4;
   float *c;
