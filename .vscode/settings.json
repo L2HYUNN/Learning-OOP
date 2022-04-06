@@ -6,6 +6,7 @@
     "locale": "cpp",
     "cmath": "cpp",
     "iosfwd": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "complex": "cpp"
   }
 }

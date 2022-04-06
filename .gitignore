@@ -5,3 +5,5 @@ quiz2
 .quiz2
 .vscode
 /.vscode
+*.wav
+*.txt
