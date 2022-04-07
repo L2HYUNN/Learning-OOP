@@ -93,7 +93,6 @@ int main()
       data[i] = (short)(a * sin(2.0 * pi * 레2 * i * dt));
     else if (i < 41 * N)
       data[i] = (short)(a * sin(2.0 * pi * 미2 * i * dt) + sin(2.0 * pi * 라 * i * dt));
-    // 미파 미파미도레
     else if (i < 43 * N)
       data[i] = 0;
     else if (i < 44 * N)
@@ -116,7 +115,6 @@ int main()
       data[i] = 0;
     else if (i < 55 * N)
       data[i] = 0;
-    //다음
     else if (i < 56 * N)
       data[i] = (short)(a * sin(2.0 * pi * 도2 * i * dt));
     else if (i < 57 * N)
@@ -167,7 +165,6 @@ int main()
       data[i] = (short)(a * sin(2.0 * pi * 레2 * i * dt));
     else if (i < 83 * N)
       data[i] = (short)(a * sin(2.0 * pi * 도2 * i * dt));
-    // 다음
     else if (i < 84 * N)
       data[i] = (short)(a * sin(2.0 * pi * 도 * i * dt));
     else if (i < 85 * N)
@@ -190,7 +187,6 @@ int main()
       data[i] = (short)(a * sin(2.0 * pi * 파2 * i * dt));
     else if (i < 95 * N)
       data[i] = (short)(a * sin(2.0 * pi * 미2 * i * dt) + sin(2.0 * pi * 라 * i * dt));
-    // 미파 미파미도레
     else if (i < 97 * N)
       data[i] = 0;
     else if (i < 98 * N)
@@ -211,8 +207,6 @@ int main()
       data[i] = (short)(a * sin(2.0 * pi * 레2 * i * dt) + sin(2.0 * pi * 솔 * i * dt));
     else if (i < 109 * N)
       data[i] = 0;
-    //다음
-    // 레~
     else if (i < 110 * N)
       data[i] = (short)(a * sin(2.0 * pi * 미 * i * dt));
     else if (i < 111 * N)
@@ -239,7 +233,6 @@ int main()
       data[i] = (short)(a * sin(2.0 * pi * 도2 * i * dt));
     else if (i < 122 * N)
       data[i] = (short)(a * sin(2.0 * pi * 미 * i * dt));
-    // 라 도 파 미~
     else if (i < 123 * N)
       data[i] = (short)(a * sin(2.0 * pi * 라2 * i * dt));
     else if (i < 124 * N)
@@ -256,8 +249,6 @@ int main()
       data[i] = (short)(a * sin(2.0 * pi * 라2 * i * dt));
     else if (i < 134 * N)
       data[i] = (short)(a * sin(2.0 * pi * 솔2 * i * dt) + sin(2.0 * pi * 솔 * i * dt));
-    // else if (i < 28 * N)
-    //   data[i] = (short)(a * sin(2.0 * pi * 파 * i * dt));
     else
       data[i] = (short)(a * sin(2.0 * pi * 도 * i * dt));
   }
@@ -266,7 +257,7 @@ int main()
   myfile.read(header, sizeof(header));
   myfile.close();
 
-  ofstream new_music("new_music_end5.wav", ios::out | ios::binary);
+  ofstream new_music("waveFile-result.wav", ios::out | ios::binary);
   new_music.write(header, sizeof(header));
   new_music.write((char *)data, sizeof(data));
   new_music.close();
