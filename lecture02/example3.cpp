@@ -2,11 +2,12 @@
 using namespace std;
 int main()
 {
-  int a = 48, b = 15, c;
+  const int a = 1, b = 3, d = 2;
+  short c = 0;
+  c = a << 7;
+  c |= b << 3;
+  c |= d;
 
-  c = a << 2;
-  cout << "a*4  " << dec << c << endl;
-
-  c = b >> 2;
-  cout << "b/4  " << dec << c << endl;
+  cout << oct << c << endl;
+  return 0;
 }
