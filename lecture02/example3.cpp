@@ -1,13 +1,19 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 int main()
 {
-  const int a = 1, b = 3, d = 2;
-  short c = 0;
-  c = a << 7;
-  c |= b << 3;
-  c |= d;
+  int A[4];
+  short *aa;
 
-  cout << oct << c << endl;
+  aa = (short *)A;
+  for (int i = 0; i < 8; i++)
+  {
+    aa[i] = i + 5;
+  }
+  for (int i = 0; i < 4; i++)
+  {
+    cout << " 0x" << dec << A[i] << endl;
+  }
   return 0;
 }
