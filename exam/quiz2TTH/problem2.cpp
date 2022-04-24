@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-float PI = 3.141592;
 float fn(float *, float *);
 int main()
 {
@@ -15,15 +14,16 @@ int main()
 }
 float fn(float *xt, float *t)
 {
+  float PI = 3.141592;
   int a = 6000, n = 100;
   float dt = 0.01;
   float xsum;
 
   for (int i = 0; i < n; i++)
   {
-    t[i] = i;
-    xt[i] = sin(2 * PI * i * dt);
-    xsum += xt[i];
+    *(t + i) = 0.0 + (i * dt);
+    *(xt + i) = sin(2 * PI * i * dt);
+    xsum += *(xt + i);
   }
   return xsum;
 }
