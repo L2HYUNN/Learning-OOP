@@ -16,6 +16,7 @@ int main()
       cout << x << endl;
       break;
     }
+    cout << End Midterm Exam Thank you ! << endl;
   }
   return 0;
 }
