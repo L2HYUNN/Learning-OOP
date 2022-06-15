@@ -1,17 +1,25 @@
 #include <iostream>
-#include <random>
 using namespace std;
-
+class A
+{
+public:
+  A() : a(20) {}
+  short ff() { return a * a; }
+  short a;
+}; // class A
+class B : public A
+{
+public:
+  B(){};
+  short ff() { return a * a * a; }
+}; // class B
 int main()
 {
-  random_device rd;
-  mt19937 gen(rd());
-  uniform_int_distribution<int> dis(0, 99);
-
-  for (int i = 0; i < 5; i++)
-  {
-    cout << "Ramdom Num : " << dis(gen) << endl;
-  }
-
-  return 0;
+  A *aa[3];
+  aa[0] = new A();
+  aa[1] = new B();
+  aa[2] = new B();
+  for (int i = 0; i < 3; i++)
+    cout << aa[i]->ff() << endl;
+  return 1;
 }
