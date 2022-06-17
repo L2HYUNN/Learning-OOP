@@ -4,7 +4,7 @@ class A
 {
 public:
   A() : a(20) {}
-  short ff() { return a * a; }
+  virtual short ff() { return a * a; }
   short a;
 }; // class A
 class B : public A
