@@ -20,6 +20,10 @@ int main()
   aa[1] = new B();
   aa[2] = new B();
   for (int i = 0; i < 3; i++)
+  {
     cout << aa[i]->ff() << endl;
+    cout << "Hello" << endl;
+  }
+
   return 1;
 }
